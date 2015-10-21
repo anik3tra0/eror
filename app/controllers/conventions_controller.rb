@@ -4,9 +4,9 @@ class ConventionsController < ApplicationController
 
   def index
     if user_signed_in?
-      @convention = current_user.conventions.all
+      @convention = current_user.conventions.all.order("created_at DESC").paginate(page: params[:page], per_page: 7)
     else
-      @convention = Convention.all
+      @convention = Convention.all.order("created_at DESC").paginate(page: params[:page], per_page: 7)
     end
   end
 

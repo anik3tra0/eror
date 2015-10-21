@@ -4,9 +4,9 @@ class CmdsController < ApplicationController
   
   def index
     if user_signed_in?
-      @command = current_user.cmds.all
+      @command = current_user.cmds.all.order("created_at DESC").paginate(page: params[:page], per_page: 7)
     else
-      @command = Cmd.all
+      @command = Cmd.all.order("created_at DESC").paginate(page: params[:page], per_page: 7)
     end
   end
 

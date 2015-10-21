@@ -43,4 +43,7 @@
 	<% end %>
 	</tbody>
 	</table>
+	<div class="text-center"> 
+		<%= will_paginate @convention, renderer: BootstrapPagination::Rails, previous_label: "Newer", next_label: "Older" %>
+	</div>
 </div>

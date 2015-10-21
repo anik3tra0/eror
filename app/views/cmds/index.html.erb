@@ -14,6 +14,7 @@
 		<th>Options</th>
 		<th>Description</th>
 		<th>Created By</th>
+		<th>Created At</th>
 		<% if user_signed_in? %>
 		<th>Show</th>
 		<th>Edit</th>
@@ -29,6 +30,7 @@
 			<td><%= cmd.option %></td>
 			<td><%= cmd.description %></td>
 			<td><%= cmd.user.email %></td>
+			<td><%= cmd.created_at %></td>
 			<% if user_signed_in? %>
 			<td><%= link_to "Show", cmd_path(cmd), class: "btn btn-info" %></td>
 			<td><%= link_to "Edit", edit_cmd_path(cmd), class: "btn btn-info" %></td>
@@ -38,4 +40,7 @@
 	<% end %>
 	</tbody>
 	</table>
+	<div class="text-center"> 
+		<%= will_paginate @command, renderer: BootstrapPagination::Rails, previous_label: "Newer", next_label: "Older" %>
+	</div>
 </div>

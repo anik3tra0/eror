@@ -4,9 +4,9 @@ class ErorsController < ApplicationController
 
   def index
     if user_signed_in?
-      @eror = current_user.erors.all
+      @eror = current_user.erors.all.order("created_at DESC").paginate(page: params[:page], per_page: 7)
     else
-      @eror = Eror.all
+      @eror = Eror.all.order("created_at DESC").paginate(page: params[:page], per_page: 7)
     end    
   end
 

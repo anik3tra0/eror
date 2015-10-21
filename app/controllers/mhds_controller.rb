@@ -4,9 +4,9 @@ before_action :find_mhd, only: [:show, :edit, :update, :destroy]
 
   def index
     if user_signed_in?
-      @mhd = current_user.mhds.all
+      @mhd = current_user.mhds.all.order("created_at DESC").paginate(page: params[:page], per_page: 7)
     else
-      @mhd = Mhd.all
+      @mhd = Mhd.all.order("created_at DESC").paginate(page: params[:page], per_page: 7)
     end
   end
 
