@@ -51,4 +51,5 @@ class CmdsController < ApplicationController
   def find_command
     @command = Cmd.find(params[:id])
   end
+
 end
