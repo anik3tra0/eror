@@ -1,35 +1,46 @@
-<h1>Dashboard#index</h1>
-<p>Find me in app/views/dashboard/index.html.erb</p>
 
-<div class="container">
+<div class="container" id="background">
+	<div class="container" id="quote">
+		<blockquote>
+		<p>"Sometimes the wrong choices lead us to the right places."</p>
+		<footer>Someone famous</footer>
+		</blockquote>
+	</div>
+</div>
+<div class="container" id="options">
 	<div class="col-sm-6">
-		<div class="row">
-			<div class="container">
-				<h3><%= link_to "Commands", cmds_path %></h3>	
-			</div>
+		<div class="row item">
+			
+			<h3><%= link_to "Commands", cmds_path, class: "btn btn-primary" %></h3>	
+			
 		</div>
 	</div>
 	<div class="col-sm-6">
-		<div class="row">
-			<div class="container">
-				<h3><%= link_to "Conventions", conventions_path %></h3>	
-			</div>
+		<div class="row item">
+			
+			<h3><%= link_to "Conventions", conventions_path, class:"btn btn-primary" %></h3>	
+			
 		</div>
 	</div>
 </div>
 <div class="container">
 	<div class="col-sm-6">
-		<div class="row">
-			<div class="container">
-				<h3><%= link_to "Errors", erors_path %></h3>	
-			</div>
+		<div class="row item">
+			
+			<h3><%= link_to "Errors", erors_path, class: "btn btn-primary" %></h3>	
+			
 		</div>
 	</div>
 	<div class="col-sm-6">
-		<div class="row">
-			<div class="container">
-				<h3><%= link_to "Methods", mhds_path %></h3>	
-			</div>
+		<div class="row item">
+			
+			<h3><%= link_to "Methods", mhds_path, class: "btn btn-primary" %></h3>	
+			
 		</div>
 	</div>
+</div>
+<div id="footer">
+  <div class="container">
+    <p class="muted credit">Developer <a href="#">Aniket Rao</a></p>
+  </div>
 </div>
