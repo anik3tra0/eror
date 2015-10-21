@@ -1,0 +1,43 @@
+<div class="container">
+<% if user_signed_in? %>
+<h2 class="text-center">Your Methods</h2>
+<%= link_to "Add Method", new_mhd_path, class: "btn btn-info" %>
+<% else %>
+<h2 class="text-center">All Methods</h2>
+<% end %>
+</div>
+<div class="container">
+	<table class="table table-hover table-bordered">
+	<thead><tr>
+		<th>#</th>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Value</th>
+		<th>Description</th>
+		<th>Created By</th>
+		<% if user_signed_in? %>
+		<th>Show</th>
+		<th>Edit</th>
+		<th>Delete</th>
+		<% end %>
+	</tr>
+	</thead>
+	<tbody class="table-hover">
+	<% @mhd.each_with_index do |md,index| %>
+		<tr>
+			<td><%= index + 1 %></td>
+			<td><%= md.name.downcase%></td>
+			<td><%= md.mtype %></td>
+			<td><%= md.value %></td>
+			<td><%= md.description %></td>
+			<td><%= md.user.email %></td>
+			<% if user_signed_in? %>
+			<td><%= link_to "Show", mhd_path(md), class: "btn btn-info" %></td>
+			<td><%= link_to "Edit", edit_mhd_path(md), class: "btn btn-info" %></td>
+			<td><%= link_to "Delete", mhd_path(md), method: :delete, data: {confirm: "Sire! Are you sure you want to do this?"}, class: "btn btn-info" %></td>
+			<% end %>
+		</tr>
+	<% end %>
+	</tbody>
+	</table>
+</div>

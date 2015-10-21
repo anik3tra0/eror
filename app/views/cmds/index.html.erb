@@ -1,0 +1,41 @@
+<div class="container">
+<% if user_signed_in? %>
+<h2 class="text-center">Your Commands</h2>
+<%= link_to "Add Command", new_cmd_path, class: "btn btn-info" %>
+<% else %>
+<h2 class="text-center">All Commands</h2>
+<% end %>
+</div>
+<div class="container">
+	<table class="table table-hover table-bordered">
+	<thead><tr>
+		<th>#</th>
+		<th>Commands</th>
+		<th>Options</th>
+		<th>Description</th>
+		<th>Created By</th>
+		<% if user_signed_in? %>
+		<th>Show</th>
+		<th>Edit</th>
+		<th>Delete</th>
+		<% end %>
+	</tr>
+	</thead>
+	<tbody class="table-hover">
+	<% @command.each_with_index do |cmd,index| %>
+		<tr>
+			<td><%= index + 1 %></td>
+			<td><%= cmd.name %></td>
+			<td><%= cmd.option %></td>
+			<td><%= cmd.description %></td>
+			<td><%= cmd.user.email %></td>
+			<% if user_signed_in? %>
+			<td><%= link_to "Show", cmd_path(cmd), class: "btn btn-info" %></td>
+			<td><%= link_to "Edit", edit_cmd_path(cmd), class: "btn btn-info" %></td>
+			<td><%= link_to "Delete", cmd_path(cmd), method: :delete, data: {confirm: "Sire! Are you sure you want to do this?"}, class: "btn btn-info" %></td>
+			<% end %>
+		</tr>
+	<% end %>
+	</tbody>
+	</table>
+</div>

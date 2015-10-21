@@ -1,0 +1,31 @@
+
+<div class="container"><h2 class="text-center">Conventions over Configurations</h2></div>
+
+<div class="container show-page">
+	<table class="table table-hover table-bordered">
+	<thead><tr>
+		<th>#</th>
+		<th>Controller</th>
+		<th>Action</th>
+		<th>Views</th>
+		<th>URI</th>
+		<th>Description</th>
+		<th>Edit</th>
+		<th>Delete</th>
+	</tr>
+	</thead>
+	<tbody class="table-hover">
+	<% index = 0 %>
+		<tr>
+			<td><%= index ++ 1 %></td>
+			<td><%= @convention.ctlr.downcase %></td>
+			<td><%= @convention.action %></td>
+			<td><%= @convention.views %></td>
+			<td><%= @convention.uri.downcase %></td>
+			<td><%= @convention.description%></td>
+			<td><%= link_to "Edit", edit_convention_path(@convention), class: "btn btn-info" %></td>
+			<td><%= link_to "Delete", convention_path(@convention), method: :delete, data: {confirm: "Sire! Are you sure you want to do this?"}, class: "btn btn-info" %></td>
+		</tr>
+	</tbody>
+	</table>
+</div>

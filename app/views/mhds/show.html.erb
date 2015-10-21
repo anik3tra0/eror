@@ -1,0 +1,28 @@
+<div class="container"><h2 class="text-center">You don't want to repeat yourself!</h2></div>
+
+<div class="container show-page">
+	<table class="table table-hover table-bordered">
+	<thead><tr>
+		<th>#</th>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Value</th>
+		<th>Description</th>
+		<th>Edit</th>
+		<th>Delete</th>
+	</tr>
+	</thead>
+	<tbody class="table-hover">
+	<% index = 0 %>
+		<tr>
+			<td><%= index ++ 1 %></td>
+			<td><%= @mhd.name.downcase %></td>
+			<td><%= @mhd.mtype %></td>
+			<td><%= @mhd.value %></td>
+			<td><%= @mhd.description %></td>
+			<td><%= link_to "Edit", edit_mhd_path(@mhd), class: "btn btn-info" %></td>
+			<td><%= link_to "Delete", mhd_path(@mhd), method: :delete, data: {confirm: "Sire! Are you sure you want to do this?"}, class: "btn btn-info" %></td>
+		</tr>
+	</tbody>
+	</table>
+</div>

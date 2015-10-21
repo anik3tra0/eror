@@ -1,0 +1,35 @@
+<%= form_for @mhd do |f| %>
+<% if @mhd.errors.any? %>
+<h3><%= pluralize(@mhd.errors.count, "error") %>convention could not be saved!</h3>
+<ul><% @mhd.errors.full_messages.each do |msg| %>
+	<li><%= msg %></li>
+	<% end %>
+</ul>
+<% end %>	
+
+	<%= f.label :name, "Method Name" %><br>
+	<%= f.text_field :name %>
+
+	<br>
+	<br>
+
+	<%= f.label :mtype, "Type"%><br>
+	<%= f.text_field :mtype %>
+
+	<br>
+	<br>
+
+	<%= f.label :value, "Value"%><br>
+	<%= f.text_area :value %>
+
+	<br>
+	<br>
+
+	<%= f.label :description, "Description"%><br>
+	<%= f.text_area :description %>
+
+	<br>
+	<br>
+
+	<%= f.submit "Submit" %>
+<% end %>

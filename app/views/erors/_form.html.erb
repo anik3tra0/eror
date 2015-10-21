@@ -1,0 +1,35 @@
+<%= form_for @eror do |f| %>
+<% if @eror.errors.any? %>
+<h3><%= pluralize(@eror.errors.count, "error") %>Error could not be saved!</h3>
+<ul><% @eror.errors.full_messages.each do |msg| %>
+	<li><%= msg %></li>
+	<% end %>
+</ul>
+<% end %>	
+
+	<%= f.label :name, "Error Name" %><br>
+	<%= f.text_field :name %>
+
+	<br>
+	<br>
+
+	<%= f.label :description, "Description"%><br>
+	<%= f.text_field :description %>
+
+	<br>
+	<br>
+
+	<%= f.label :cause, "Cause"%><br>
+	<%= f.text_area :cause %>
+
+	<br>
+	<br>
+
+	<%= f.label :fix, "Fix"%><br>
+	<%= f.text_area :fix %>
+
+	<br>
+	<br>
+
+	<%= f.submit "Submit" %>
+<% end %>
