@@ -1,0 +1,29 @@
+<h2 class="text-center">All Commands</h2>
+<div class="container">
+	<table class="table table-hover table-bordered">
+	<thead><tr>
+		<th>#</th>
+		<th>Commands</th>
+		<th>Options</th>
+		<th>Description</th>
+		<th>Created By</th>
+		<th>Created At</th>
+	</tr>
+	</thead>
+	<tbody class="table-hover">
+	<% @cmd_all.each_with_index do |cmd,index| %>
+		<tr>
+			<td><%= index + 1 %></td>
+			<td><%= cmd.name %></td>
+			<td><%= cmd.option %></td>
+			<td><%= cmd.description %></td>
+			<td><%= cmd.user.email %></td>
+			<td><%= cmd.created_at %></td>
+		</tr>
+	<% end %>
+	</tbody>
+	</table>
+	<div class="text-center"> 
+		<%= will_paginate @cmd_all, renderer: BootstrapPagination::Rails, previous_label: "Newer", next_label: "Older" %>
+	</div>
+</div>

@@ -1,0 +1,29 @@
+<h2 class="text-center">All Errors</h2>
+<div class="container">
+	<table class="table table-hover table-bordered">
+	<thead><tr>
+		<th>#</th>
+		<th>Name</th>
+		<th>Description</th>
+		<th>Cause</th>
+		<th>Fix</th>
+		<th>Created By</th>
+	</tr>
+	</thead>
+	<tbody class="table-hover">
+	<% @eror_all.each_with_index do |er,index| %>
+		<tr>
+			<td><%= index + 1 %></td>
+			<td><%= er.name.downcase%></td>
+			<td><%= er.description %></td>
+			<td><%= er.cause %></td>
+			<td><%= er.fix %></td>
+			<td><%= er.user.email %></td>
+		</tr>
+	<% end %>
+	</tbody>
+	</table>
+	<div class="text-center"> 
+		<%= will_paginate @eror_all, renderer: BootstrapPagination::Rails, previous_label: "Newer", next_label: "Older" %>
+	</div>
+</div>

@@ -1,6 +1,6 @@
 class CmdsController < ApplicationController
   before_action :find_command, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show, :all]
   
   def index
     if user_signed_in?
@@ -23,6 +23,14 @@ class CmdsController < ApplicationController
       end
   end
 
+  def all
+    if user_signed_in?
+      @cmd_all = Cmd.all.order("created_at DESC").paginate(page: params[:page], per_page: 7)
+    else
+      redirect_to '/'
+    end
+  end
+
   def show
   end
 
@@ -41,6 +49,7 @@ class CmdsController < ApplicationController
     @command.destroy
     redirect_to root_path
   end
+
 
   private
 

@@ -23,6 +23,14 @@ before_action :find_mhd, only: [:show, :edit, :update, :destroy]
     end
   end
 
+  def all
+    if user_signed_in?
+      @mhds_all = Mhd.all.order("created_at DESC").paginate(page: params[:page], per_page: 7)
+    else
+      redirect_to '/'
+    end
+  end
+
   def show
   end
 

@@ -23,6 +23,14 @@ class ConventionsController < ApplicationController
     end
   end
 
+  def all
+    if user_signed_in?
+      @conv_all = Convention.all.order("created_at DESC").paginate(page: params[:page], per_page: 7)
+    else
+      redirect_to '/'
+    end
+  end
+
   def show
   end
 

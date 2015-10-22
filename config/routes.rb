@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
-
-  
-
   root 'welcome#index'
+  get 'cmds/all'
+  get 'conventions/all'
+  get 'mhds/all'
+  get 'erors/all'
   devise_for :users
   resources :mhds
   resources :cmds
   resources :conventions
   resources :erors
   get 'dashboard/index'
+
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
