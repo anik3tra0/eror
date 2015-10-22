@@ -1,7 +1,9 @@
 <div class="container">
 <% if user_signed_in? %>
 <h2 class="text-center">Your Errors</h2>
-<div class=""container><h3 class="text-center"><%= link_to "Add Error", new_eror_path, class: "btn btn-info" %></h3></div>
+<div class=""container>
+<h3 class="text-center" id="dashboard"><%= link_to "Dashboard", dashboard_index_path, class: "btn btn-info" %></h3>
+<h3 class="text-center"><%= link_to "Add Error", new_eror_path, class: "btn btn-info" %></h3></div>
 <% else %>
 <h2 class="text-center">All Errors</h2>
 <% end %>
