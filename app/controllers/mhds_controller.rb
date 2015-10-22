@@ -27,7 +27,7 @@ before_action :find_mhd, only: [:show, :edit, :update, :destroy]
     if user_signed_in?
       @mhds_all = Mhd.all.order("created_at DESC").paginate(page: params[:page], per_page: 7)
     else
-      redirect_to '/'
+      render 'index'
     end
   end
 
