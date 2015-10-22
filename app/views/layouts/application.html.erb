@@ -36,6 +36,8 @@
               <li><%= link_to "All Methods", mhds_all_path %></li>
             </ul>
         </li>
+        <% else %>
+        <%= yield :nav %>
         <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
