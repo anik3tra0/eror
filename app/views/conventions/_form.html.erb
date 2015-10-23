@@ -1,41 +1,19 @@
-<%= form_for @convention do |f| %>
-<% if @convention.errors.any? %>
-<h3><%= pluralize(@convention.errors.count, "error") %>convention could not be saved!</h3>
-<ul><% @convention.errors.full_messages.each do |msg| %>
-	<li><%= msg %></li>
+<div class="container center-block" id="forms">
+	<%= bootstrap_form_for @convention do |f|  %>
+	<% if @convention.errors.any? %>
+	<h3><%= pluralize(@convention.errors.count, "error") %>convention could not be saved!</h3>
+	<ul><% @convention.errors.full_messages.each do |msg| %>
+		<li><%= msg %></li>
+		<% end %>
+	</ul>
 	<% end %>
-</ul>
-<% end %>	
-
-	<%= f.label :ctlr, "Controller Name" %><br>
-	<%= f.text_field :ctlr %>
-
-	<br>
-	<br>
-
-	<%= f.label :action, "Action"%><br>
-	<%= f.text_field :action %>
-
-	<br>
-	<br>
-
-	<%= f.label :views, "View"%><br>
-	<%= f.text_field :views %>
-
-	<br>
-	<br>
-
-	<%= f.label :uri, "URI"%><br>
-	<%= f.text_field :uri %>
-
-	<br>
-	<br>
-
-	<%= f.label :description, "Description"%><br>
-	<%= f.text_area :description %>
-
-	<br>
-	<br>
-
-	<%= f.submit "Submit" %>
-<% end %>
+		<%= f.text_field :ctlr, label: "Controller" %>
+		<%= f.text_field :action, label: "Action" %>
+		<%= f.text_field :views, label: "Views" %>
+		<%= f.text_field :uri, label: "URI" %>
+		<%= f.text_area :description, label: "Description" %>
+		<div class="text-center">
+			<%= f.submit "Submit", class: "btn btn-success" %>
+		</div>
+	<% end %>
+</div>	

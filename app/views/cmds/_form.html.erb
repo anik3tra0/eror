@@ -1,29 +1,17 @@
-<%= form_for @command do |f| %>
-<% if @command.errors.any? %>
-<h3><%= pluralize(@command.errors.count, "error") %>command could not be saved!</h3>
-<ul><% @command.errors.full_messages.each do |msg| %>
-	<li><%= msg %></li>
+<div class="container center-block" id="forms">
+	<%= bootstrap_form_for @command do |f|  %>
+	<% if @command.errors.any? %>
+	<h3><%= pluralize(@command.errors.count, "error") %>convention could not be saved!</h3>
+	<ul><% @command.errors.full_messages.each do |msg| %>
+		<li><%= msg %></li>
+		<% end %>
+	</ul>
 	<% end %>
-</ul>
-<% end %>	
-
-	<%= f.label :name %><br>
-	<%= f.text_field :name %>
-
-	<br>
-	<br>
-
-	<%= f.label :option %><br>
-	<%= f.text_field :option %>
-
-	<br>
-	<br>
-
-	<%= f.label :description %><br>
-	<%= f.text_area :description %>
-
-	<br>
-	<br>
-
-	<%= f.submit "Submit" %>
-<% end %>
+		<%= f.text_field :name, label: "Name" %>
+		<%= f.text_field :option, label: "Option" %>
+		<%= f.text_area :description, label: "Description" %>
+		<div class="text-center">
+			<%= f.submit "Submit", class: "btn btn-success" %>
+		</div>
+	<% end %>
+</div>	
