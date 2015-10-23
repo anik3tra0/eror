@@ -6,6 +6,13 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+<script type="text/javascript">
+$(document).ready(function(){
+  setTimeout(function(){
+    $('#flash').remove();
+  }, 5000);
+ })
+</script>
 <body>
 <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -45,11 +52,13 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<% if alert %>
-<p class="alert"><%= alert %></p>
-<% elsif notice %>
-<p class="notice"><%= notice %></p>
-<% end %>
+<div id="flash">
+  <% if alert %>
+  <p class="alert"><%= alert %></p>
+  <% elsif notice %>
+  <p class="notice"><%= notice %></p>
+  <% end %>
+</div>
 <%= yield %>
 </body>
 </html>
