@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Eror</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -14,7 +15,7 @@ $(document).ready(function(){
  })
 </script>
 <body>
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default-fixed">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -60,5 +61,6 @@ $(document).ready(function(){
   <% end %>
 </div>
 <%= yield %>
+</footer>
 </body>
 </html>
