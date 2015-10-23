@@ -3,7 +3,7 @@
 	<% if user_signed_in? %>
 		<h2 class="text-center">Your Conventions</h2>
 			<h3 class="text-center" id="dashboard"><%= link_to "Dashboard", dashboard_index_path, class: "btn btn-success" %></h3>
-			<h3 class="text-center" id="create"><%= link_to "Add Convention", new_convention_path, class: "btn btn-info" %></h3>
+			<h3 class="text-center" id="create"><%= link_to "Add Convention", new_convention_path, class: "btn btn-primary" %></h3>
 	<% else %>
 	<h2 class="text-center">All Conventions</h2>
 	<% end %>
@@ -37,8 +37,8 @@
 			<td><%= conv.user.email %></td>
 			<% if user_signed_in? %>
 			<td><%= link_to "Show", convention_path(conv), class: "btn btn-info" %></td>
-			<td><%= link_to "Edit", edit_convention_path(conv), class: "btn btn-info" %></td>
-			<td><%= link_to "Delete", convention_path(conv), method: :delete, data: {confirm: "Sire! Are you sure you want to do this?"}, class: "btn btn-info" %></td>
+			<td><%= link_to "Edit", edit_convention_path(conv), class: "btn btn-warning" %></td>
+			<td><%= link_to "Delete", convention_path(conv), method: :delete, data: {confirm: "Sire! Are you sure you want to do this?"}, class: "btn btn-danger" %></td>
 			<% end %>
 		</tr>
 	<% end %>

@@ -19,8 +19,8 @@
 			<td><%= @command.name %></td>
 			<td><%= @command.option %></td>
 			<td><%= @command.description%></td>
-			<td><%= link_to "Edit", edit_cmd_path(@command), class: "btn btn-info" %></td>
-			<td><%= link_to "Delete", cmd_path(@command), method: :delete, data: {confirm: "Sire! Are you sure you want to do this?"}, class: "btn btn-info" %></td>
+			<td><%= link_to "Edit", edit_cmd_path(@command), class: "btn btn-warning" %></td>
+			<td><%= link_to "Delete", cmd_path(@command), method: :delete, data: {confirm: "Sire! Are you sure you want to do this?"}, class: "btn btn-danger" %></td>
 		</tr>
 	</tbody>
 	</table>

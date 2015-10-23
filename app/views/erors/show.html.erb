@@ -21,8 +21,8 @@
 			<td><%= @eror.description %></td>
 			<td><%= @eror.cause %></td>
 			<td><%= @eror.fix %></td>
-			<td><%= link_to "Edit", edit_eror_path(@eror), class: "btn btn-info" %></td>
-			<td><%= link_to "Delete", eror_path(@eror), method: :delete, data: {confirm: "Sire! Are you sure you want to do this?"}, class: "btn btn-info" %></td>
+			<td><%= link_to "Edit", edit_eror_path(@eror), class: "btn btn-warning" %></td>
+			<td><%= link_to "Delete", eror_path(@eror), method: :delete, data: {confirm: "Sire! Are you sure you want to do this?"}, class: "btn btn-danger" %></td>
 		</tr>
 	</tbody>
 	</table>

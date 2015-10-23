@@ -3,7 +3,7 @@
 <% if user_signed_in? %>
 <h2 class="text-center">Your Errors</h2>
 <h3 class="text-center" id="dashboard"><%= link_to "Dashboard", dashboard_index_path, class: "btn btn-success" %></h3>
-<h3 class="text-center" id="create"><%= link_to "Add Error", new_eror_path, class: "btn btn-info" %></h3>
+<h3 class="text-center" id="create"><%= link_to "Add Error", new_eror_path, class: "btn btn-primary" %></h3>
 <% else %>
 <h2 class="text-center">All Errors</h2>
 <% end %>
@@ -36,8 +36,8 @@
 			<td><%= er.user.email %></td>
 			<% if user_signed_in? %>
 			<td><%= link_to "Show", eror_path(er), class: "btn btn-info" %></td>
-			<td><%= link_to "Edit", edit_eror_path(er), class: "btn btn-info" %></td>
-			<td><%= link_to "Delete", eror_path(er), method: :delete, data: {confirm: "Sire! Are you sure you want to do this?"}, class: "btn btn-info" %></td>
+			<td><%= link_to "Edit", edit_eror_path(er), class: "btn btn-warning" %></td>
+			<td><%= link_to "Delete", eror_path(er), method: :delete, data: {confirm: "Sire! Are you sure you want to do this?"}, class: "btn btn-danger" %></td>
 			<% end %>
 		</tr>
 	<% end %>

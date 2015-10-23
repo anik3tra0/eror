@@ -21,8 +21,8 @@
 			<td><%= @mhd.mtype %></td>
 			<td><%= @mhd.value %></td>
 			<td><%= @mhd.description %></td>
-			<td><%= link_to "Edit", edit_mhd_path(@mhd), class: "btn btn-info" %></td>
-			<td><%= link_to "Delete", mhd_path(@mhd), method: :delete, data: {confirm: "Sire! Are you sure you want to do this?"}, class: "btn btn-info" %></td>
+			<td><%= link_to "Edit", edit_mhd_path(@mhd), class: "btn btn-warning" %></td>
+			<td><%= link_to "Delete", mhd_path(@mhd), method: :delete, data: {confirm: "Sire! Are you sure you want to do this?"}, class: "btn btn-danger" %></td>
 		</tr>
 	</tbody>
 	</table>

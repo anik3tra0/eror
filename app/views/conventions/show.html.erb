@@ -23,8 +23,8 @@
 			<td><%= @convention.views %></td>
 			<td><%= @convention.uri.downcase %></td>
 			<td><%= @convention.description%></td>
-			<td><%= link_to "Edit", edit_convention_path(@convention), class: "btn btn-info" %></td>
-			<td><%= link_to "Delete", convention_path(@convention), method: :delete, data: {confirm: "Sire! Are you sure you want to do this?"}, class: "btn btn-info" %></td>
+			<td><%= link_to "Edit", edit_convention_path(@convention), class: "btn btn-warning" %></td>
+			<td><%= link_to "Delete", convention_path(@convention), method: :delete, data: {confirm: "Sire! Are you sure you want to do this?"}, class: "btn btn-danger" %></td>
 		</tr>
 	</tbody>
 	</table>
