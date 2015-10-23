@@ -1,10 +1,13 @@
 @import 'bootstrap-sprockets'
-@import 'bootstrap' 
+@import 'bootstrap'
+@import 'typography' 
 
 .jumbotron
 	height: 100vh
 	.container
 		margin-top: 125px
+		h1
+			font-family: $paragraph
 		.text-center
 			.btn-primary
 				width: 125px
@@ -13,6 +16,10 @@
 
 .navbar
 	margin-bottom: 0
+
+.navbar-brand
+	font-weight: 700
+	text-transform: uppercase
 
 .navbar-right
 	margin-right: 40px
@@ -85,6 +92,16 @@
 	.btn-info
 		width: 125px
 
+td
+	.btn-info
+		width: 75px
+	.btn-warning
+		width: 75px
+	.btn-danger
+		width: 75px		
+
+th
+	text-align: center
 
 
 
