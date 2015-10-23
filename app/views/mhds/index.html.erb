@@ -2,9 +2,8 @@
 <div class="container">
 <% if user_signed_in? %>
 <h2 class="text-center">Your Methods</h2>
-<div class=""container>
-<h3 class="text-center" id="dashboard"><%= link_to "Dashboard", dashboard_index_path, class: "btn btn-info" %></h3>
-<h3 class="text-center"><%= link_to "Add Method", new_mhd_path, class: "btn btn-info" %></h3></div>
+<h3 class="text-center" id="dashboard"><%= link_to "Dashboard", dashboard_index_path, class: "btn btn-success" %></h3>
+<h3 class="text-center" id="create"><%= link_to "Add Method", new_mhd_path, class: "btn btn-info" %></h3>
 <% else %>
 <h2 class="text-center">All Methods</h2>
 <% end %>

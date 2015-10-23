@@ -1,14 +1,12 @@
 <%= render 'shared/nav' %>
 <div class="container">
-<% if user_signed_in? %>
-<h2 class="text-center">Your Commands</h2>
-<div class="container">
-<h3 class="text-center" id="dashboard"><%= link_to "Dashboard", dashboard_index_path, class: "btn btn-info" %></h3>
-<h3 class="text-center" id="add"><%= link_to "Add Command", new_cmd_path, class: "btn btn-info" %></h3>
-</div>
-<% else %>
-<h2 class="text-center">All Commands</h2>
-<% end %>
+	<% if user_signed_in? %>
+		<h2 class="text-center">Your Commands</h2>
+		<h3 class="text-center" id="dashboard"><%= link_to "Dashboard", dashboard_index_path, class: "btn btn-success" %></h3>
+		<h3 class="text-center" id="create"><%= link_to "Add Command", new_cmd_path, class: "btn btn-info" %></h3>
+	<% else %>
+	<h2 class="text-center">All Commands</h2>
+	<% end %>
 </div>
 <div class="container">
 	<table class="table table-hover table-bordered">
@@ -18,7 +16,6 @@
 		<th>Options</th>
 		<th>Description</th>
 		<th>Created By</th>
-		<th>Created At</th>
 		<% if user_signed_in? %>
 		<th>Show</th>
 		<th>Edit</th>
@@ -34,7 +31,6 @@
 			<td><%= cmd.option %></td>
 			<td><%= cmd.description %></td>
 			<td><%= cmd.user.email %></td>
-			<td><%= cmd.created_at %></td>
 			<% if user_signed_in? %>
 			<td><%= link_to "Show", cmd_path(cmd), class: "btn btn-info" %></td>
 			<td><%= link_to "Edit", edit_cmd_path(cmd), class: "btn btn-info" %></td>
