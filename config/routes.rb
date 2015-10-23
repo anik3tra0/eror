@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :cmds
   resources :conventions
   resources :erors
+  resources :contacts, only: [:new, :create]
   get 'dashboard/index'
 
   
