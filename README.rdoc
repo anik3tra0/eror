@@ -10,9 +10,9 @@ Things you may want to cover:
 
 * Database: 
 	
-	+ Development & Testing: SQLite3
+	* Development & Testing: SQLite3
 
-	+ Production: PostgreSQL
+	* Production: PostgreSQL
 
 == TODO
 
@@ -26,9 +26,9 @@ Things you may want to cover:
 
 == CONTRIBUTE
 
-+ Create Branch with "ContributerName_Feature"
-+ Clone application(branch) to local machine using `git clone https://github.com/anik3tra0/eror.git`
-+ Push branch to github using `git push origin BranchName`
+* Create Branch with "ContributerName_Feature"
+* Clone application(branch) to local machine using `git clone https://github.com/anik3tra0/eror.git`
+* Push branch to github using `git push origin BranchName`
 
 If you like the application the please do star it!
 
