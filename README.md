@@ -1,4 +1,4 @@
-== Eror README
+Eror README
 
 A simple tool to keep track of your Ruby on Rails commands, methods and errors...
 
@@ -14,7 +14,7 @@ A simple tool to keep track of your Ruby on Rails commands, methods and errors..
 	* Production: PostgreSQL
 
 
-== TODO
+TODO
 * Add validations to all models
 * Search Engine => Solr and Sunspot gem. Use Search branch to contribute.
 * Personalized greetings on login
@@ -24,7 +24,7 @@ A simple tool to keep track of your Ruby on Rails commands, methods and errors..
 * Add Newsletter feature
 
 
-== CONTRIBUTE
+CONTRIBUTE
 
 * Create Branch with "ContributerName_Feature"
 * Clone application(branch) to local machine using `git clone` and the provided URL
