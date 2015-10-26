@@ -1,28 +1,34 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Eror is a simple tool to keep track of your Ruby on Rails commands, methods and errors...
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version: 2.2.3
 
-* System dependencies
+* Rails version: 4.2.4
 
-* Configuration
+* Database: 
+	
+	+ Development & Testing: SQLite3
 
-* Database creation
+	+ Production: PostgreSQL
 
-* Database initialization
+== TODO
 
-* How to run the test suite
+* Search Engine => Solr and Sunspot gem. Use Search branch to contribute.
+* Personalized greetings on login
+* Footer with Github, Facebook and Twitter links
+* Style Directory Pages
+* Style Devise Pages
+* Add Newsletter feature
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+== CONTRIBUTE
 
-* ...
++ Create Branch with "ContributerName_Feature"
++ Clone application(branch) to local machine using `git clone https://github.com/anik3tra0/eror.git`
++ Push branch to github using `git push origin BranchName`
 
+If you like the application the please do star it!
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
