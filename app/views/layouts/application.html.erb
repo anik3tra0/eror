@@ -50,6 +50,12 @@ $(document).ready(function(){
         <%= yield :nav %>
         <% end %>
         <li><%= link_to "Ping", new_contact_path %></li>
+        <li class="navbar-form navbar-right">
+        <%= form_tag sresults_index_path, :method => :get do %>
+        <%= text_field_tag :search, params[:search], class:"form-control", placeholder:"Search" %>
+        <%= submit_tag "Go", :name => nil, class: "btn btn-success" %>
+        <% end %>
+        </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

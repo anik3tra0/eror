@@ -8,6 +8,7 @@ class CmdsController < ApplicationController
     else
       @command = Cmd.all.order("created_at DESC").paginate(page: params[:page], per_page: 7)
     end
+
   end
 
   def new

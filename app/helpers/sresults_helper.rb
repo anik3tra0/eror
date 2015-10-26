@@ -1,0 +1,2 @@
+module SresultsHelper
+end

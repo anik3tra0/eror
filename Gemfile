@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.2.3'
 
+gem 'sunspot_rails', '~> 2.2'
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
 gem 'bootstrap_form', '~> 2.3'
 gem 'will_paginate', '~> 3.0', '>= 3.0.7'
@@ -43,10 +44,8 @@ group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
-end
-
-group :development do
-  gem 'sqlite3'	
+  gem 'sqlite3'
+  gem 'sunspot_solr'
 end
 
 group :production do

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sresults/index'
+
   root 'welcome#index'
   get 'cmds/all'
   get 'conventions/all'

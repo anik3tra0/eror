@@ -1,0 +1,36 @@
+<div class="form-inline search">
+<%= form_tag sresults_index_path, :method => :get do %>
+	<p class="text-center">
+	<%= text_field_tag :search, params[:search], class:"form-control", placeholder:"Search" %>
+	<%= submit_tag "Go", :name => nil, class: "btn btn-success" %>
+	</p>
+<% end %>
+</div>
+<div class="container">
+	<table class="table table-hover table-bordered">
+	<thead><tr>
+		<th>Commands</th>
+		<th>Options</th>
+		<th>Description</th>
+		<th>Created By</th>
+	</tr>
+	</thead>
+	<tbody class="table-hover">
+	<% if @cmd_result.empty? %>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<% else %>
+	<% for cmd in @cmd_result do %>
+		<tr>
+			<td><code><%= cmd.name %></code></td>
+			<td><code><%= cmd.option %></code></td>
+			<td><%= cmd.description %></td>
+			<td><%= cmd.user.email %></td>
+		</tr>
+	<% end %>
+	<% end %>
+	</tbody>
+	</table>
+</div>

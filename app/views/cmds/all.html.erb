@@ -18,7 +18,7 @@
 			<td><%= cmd.option %></td>
 			<td><%= cmd.description %></td>
 			<td><%= cmd.user.email %></td>
-			<td><%= cmd.created_at %></td>
+			<td><%= cmd.created_at.strftime("%d %b. %Y") %></td>
 		</tr>
 	<% end %>
 	</tbody>
