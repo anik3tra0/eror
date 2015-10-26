@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 == README
 
 Eror is a simple tool to keep track of your Ruby on Rails commands, methods and errors...
 
 Things you may want to cover:
+=======
+# eror
+A simple tool to keep track of your Ruby on Rails commands, methods and errors...
+>>>>>>> 3a00476af2651ad19b965157b4f6f8ac2169996f
 
 * Ruby version: 2.2.3
 
@@ -14,8 +19,13 @@ Things you may want to cover:
 
 	* Production: PostgreSQL
 
+<<<<<<< HEAD
 == TODO
 * Add validations to all models
+=======
+TODO
+
+>>>>>>> 3a00476af2651ad19b965157b4f6f8ac2169996f
 * Search Engine => Solr and Sunspot gem. Use Search branch to contribute.
 * Personalized greetings on login
 * Footer with Github, Facebook and Twitter links
@@ -23,6 +33,7 @@ Things you may want to cover:
 * Style Devise Pages
 * Add Newsletter feature
 
+<<<<<<< HEAD
 
 == CONTRIBUTE
 
@@ -31,3 +42,12 @@ Things you may want to cover:
 * Push branch to github using `git push origin BranchName`
 
 If you like the application the please do star it!
+=======
+CONTRIBUTE
+
+* Create Branch with "ContributerName_Feature"
+* Clone application(branch) to local machine using `git clone https://github.com/anik3tra0/eror.git`
+* Push branch to github using `git push origin BranchName`
+
+If you like the application the please do star it!
+>>>>>>> 3a00476af2651ad19b965157b4f6f8ac2169996f
