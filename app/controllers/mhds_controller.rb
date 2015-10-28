@@ -57,6 +57,6 @@ before_action :find_mhd, only: [:show, :edit, :update, :destroy]
   end
 
   def find_mhd
-    @mhd = Mhd.find(params[:id])
+    @mhd = current_user.mhds.find(params[:id])
   end
 end

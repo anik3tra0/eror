@@ -58,7 +58,7 @@ class CmdsController < ApplicationController
   end
 
   def find_command
-    @command = Cmd.find(params[:id])
+    @command = current_user.cmds.find(params[:id])
   end
 
 end

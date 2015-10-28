@@ -57,6 +57,6 @@ class ConventionsController < ApplicationController
   end
 
   def find_convention
-    @convention = Convention.find(params[:id])
+    @convention = current_user.conventions.find(params[:id])
   end
 end

@@ -57,6 +57,6 @@ class ErorsController < ApplicationController
   end
 
   def find_eror
-    @eror = Eror.find(params[:id])
+    @eror = current_user.erors.find(params[:id])
   end
 end
